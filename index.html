@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="https://i.ibb.co/FW2cSdg/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://i.ibb.co/209JrZv/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://i.ibb.co/nQGJ9VK/favicon-16x16.png">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mobile.css">
+    <title>Zomato</title>
+  </head>
+  <body>
+    <section class="page_wrapper">
+      <!-- =============
+        Header start here 
+        ================ -->
+      <header id="header" class="d-flex">
+        <div class="logo">
+          <img src="images/logo.png" width="100" height="auto" alt="Myntra">
+        </div>
+        <div class="search d-flex">
+          <div class="location_wrap d-flex">
+            <div class="location-logo">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+            <select id="location">
+              <option value="0">Location:</option>
+              <option value="1">Mumbai</option>
+              <option value="2">Delhi</option>
+              <option value="3">Bangalore</option>
+              <option value="4">Hyderabad</option>
+              <option value="5">Chennai</option>
+              <option value="6">Kolkata</option>
+              <option value="7">Jaipur</option>
+              <option value="8">Lucknow</option>
+              <option value="9">Bhopal</option>
+              <option value="10">Patna</option>
+              <option value="11">Ranchi</option>
+              <option value="12">Chandigarh</option>
+            </select>
+          </div>
+          <div class="searchwrap d-flex">
+            <div class="searchicon">
+              <button type="submit" class="submitsearch">
+                <ion-icon name="search-outline"></ion-icon>
+              </button>
+            </div>
+            <input type="text" placeholder="Search for restaurant, cuisine or a dish" class="inputsearch">  
+          </div>
+        </div>
+        <div class="desktop-actions">
+          <ul class="d-flex">
+            <li><a href="#">Log In</a></li>
+            <li><a href="#">Sign Up</a></li>
+          </ul>
+        </div>
+      </header>
+      <!-- =============
+        Header start here 
+        ================ -->
+      <div class="sortwrap d-flex">
+        <h4>sort results by - </h4>
+        <ul class="d-flex">
+          <li>top results</li>
+          <li>popularity</li>
+          <li>locations</li>
+          <li>offers</li>
+          <li>delivery</li>
+          <li>ratings</li>
+        </ul>
+      </div>
+      <!-- ==========================
+        Left coloum for filters start 
+        =============================-->
+      <div class="container">
+        <div class="main_content d-flex">
+          <div class="filter">
+            <div class="filterprice">
+              <h4>Filter by price</h4>
+              <ul>
+                <li><input type="radio" class="input" name="price" id="hundred" value="hundred"><label for="hundred">&#x20B9; 100 - 150</label></li>
+                <li><input type="radio" class="input" name="price" id="twohundred" value="twohundred"><label for="twohundred">&#x20B9; 200 - 300</label></li>
+                <li><input type="radio" class="input" name="price" id="threehundred" value="threehundred"><label for="threehundred">&#x20B9; 300 - 500</label></li>
+                <li><input type="radio" class="input" name="price" id="fivehundred" value="fivehundred"><label for="fivehundred">&#x20B9; 500 - 700</label></li>
+              </ul>
+            </div>
+            <div class="filteritems">
+              <h4>Filter by items</h4>
+              <ul>
+                <li>
+                  <input type="checkbox" class="input" name="items" id="biryani" value="biryani">
+                  <label for="biryani">Biryani</label>
+                </li>
+                <li>
+                  <input type="checkbox" class="input" name="items" id="burger" value="burger">
+                  <label for="burger">Burger</label>
+                </li>
+                <li>
+                  <input type="checkbox" class="input" name="items" id="southindian" value="southindian">
+                  <label for="southindian">South Indian</label>
+                </li>
+                <li>
+                  <input type="checkbox" class="input" name="items" id="northindians" value="northindians">
+                  <label for="northindians">North Indian</label>
+                </li>
+                <li>
+                  <input type="checkbox" class="input" name="items" id="chinese" value="chinese">
+                  <label for="chinese">Chinese</label>
+                </li>
+                <li>
+                  <input type="checkbox" class="input" name="items" id="desserts" value="desserts">
+                  <label for="desserts">Desserts</label>
+                </li>
+              </ul>
+            </div>
+            <div class="filterlocation">
+              <h4>filter by location</h4>
+              <ul>
+                <li>
+                  <input type="checkbox" class="input" name="location" id="rangeone" value="rangeone">
+                  <label for="rangeone">0 - 1 kilometres</label>
+                </li>
+                <li>
+                  <input type="checkbox" class="input" name="location" id="rangetwo" value="rangetwo">
+                  <label for="rangetwo">1 - 2 kilometres</label>
+                </li>
+                <li>
+                  <input type="checkbox" class="input" name="location" id="rangethree" value="rangethree">
+                  <label for="rangethree">2 - 3 kilometres</label>
+                </li>
+                <li>
+                  <input type="checkbox" class="input" name="location" id="rangefour" value="rangefour">
+                  <label for="rangefour">3 - 4 kilometres</label>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- ==========================
+            Left coloum for filters end 
+            =============================-->
+          <!-- ==========================
+            Right coloum for products start 
+            =============================-->
+          <div class="product_list_wrap">
+            <ul class="product_list watches_wrap">
+              <li class="product-base">
+                <a href="#">
+                  <img src="https://i.ibb.co/Zc0gL3b/biryani.jpg" alt="">
+                  <div class="productinfo">
+                    <span class="rating">
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      4
+                      <div class="veg-non-veg"><img src="https://i.ibb.co/qWmk157/non-veg.png" width="20" alt="non-veg"></div>
+                    </span>
+                    <h3>Biryani</h3>
+                    <p>Chicken Biryani is a savory chicken and rice dish that includes layers of chicken, rice, and aromatics that are steamed together.</p>
+                    <div class="price">
+                      <span class="pricetag">Rs. 250</span>
+                      <span class="pricestrike">Rs. 300</span>
+                      <span class="priceoff">(Rs. 50 OFF)</span>
+                    </div>
+                    <button class="ordernow"><span>order now</span></button>
+                  </div>
+                </a>
+              </li>
+              <li class="product-base">
+                <a href="#">
+                  <img src="https://i.ibb.co/rcHZHsQ/burger.jpg" alt="">
+                  <div class="productinfo">
+                    <span class="rating">
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star-half-outline"></ion-icon>
+                      3.5
+                      <div class="veg-non-veg"><img src="https://i.ibb.co/yPBGp8N/veg.png" width="20" alt="veg"></div>
+                    </span>
+                    <h3>Burger</h3>
+                    <p>a popular sandwich made from ground meats that are formed into a patty, cooked, and placed between two halves of a bun.</p>
+                    <div class="price">
+                      <span class="pricetag">Rs. 150</span>
+                      <span class="pricestrike">Rs. 180</span>
+                      <span class="priceoff">(Rs. 30 OFF)</span>
+                    </div>
+                    <button class="ordernow"><span>order now</span></button>
+                  </div>
+                </a>
+              </li>
+              <li class="product-base">
+                <a href="#">
+                  <img src="https://i.ibb.co/G7K1TrK/idli.jpg" alt="">
+                  <div class="productinfo">
+                    <span class="rating">
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      3
+                      <div class="veg-non-veg"><img src="https://i.ibb.co/yPBGp8N/veg.png" width="20" alt="veg"></div>
+                    </span>
+                    <h3>Idli</h3>
+                    <p>Idli is a type of savoury rice cake, originating from the Indian subcontinent, popular as breakfast foods in Southern India and in Sri Lanka.</p>
+                    <div class="price">
+                      <span class="pricetag">Rs. 100</span>
+                      <span class="pricestrike">Rs. 120</span>
+                      <span class="priceoff">(Rs. 20 OFF)</span>
+                    </div>
+                    <button class="ordernow"><span>order now</span></button>
+                  </div>
+                </a>
+              </li>
+              <li class="product-base">
+                <a href="#">
+                  <img src="https://i.ibb.co/JcW6b16/chinese.jpg" alt="">
+                  <div class="productinfo">
+                    <span class="rating">
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      2
+                      <div class="veg-non-veg"><img src="https://i.ibb.co/yPBGp8N/veg.png" width="20" alt="veg"></div>
+                    </span>
+                    <h3>Noodles</h3>
+                    <p>Noodle, a cooked egg-and-flour paste prominent in European and Asian cuisine, generally distinguished from pasta by its elongated ribbonlike form.</p>
+                    <div class="price">
+                      <span class="pricetag">Rs. 320</span>
+                      <span class="pricestrike">Rs. 350</span>
+                      <span class="priceoff">(Rs. 30 OFF)</span>
+                    </div>
+                    <button class="ordernow"><span>order now</span></button>
+                  </div>
+                </a>
+              </li>
+              <li class="product-base">
+                <a href="#">
+                  <img src="https://i.ibb.co/ZNYxZ0C/desert.jpg" alt="">
+                  <div class="productinfo">
+                    <span class="rating">
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      5
+                      <div class="veg-non-veg"><img src="https://i.ibb.co/yPBGp8N/veg.png" width="20" alt="veg"></div>
+                    </span>
+                    <h3>Ice cream</h3>
+                    <p>Ice cream is a frozen dairy dessert obtained by freezing the ice cream mix with continuous agitation.</p>
+                    <div class="price">
+                      <span class="pricetag">Rs. 150</span>
+                      <span class="pricestrike">Rs. 180</span>
+                      <span class="priceoff">(Rs. 30 OFF)</span>
+                    </div>
+                    <button class="ordernow"><span>order now</span></button>
+                  </div>
+                </a>
+              </li>
+              <li class="product-base">
+                <a href="#">
+                  <img src="https://i.ibb.co/tDT2sHt/north.jpg" alt="">
+                  <div class="productinfo">
+                    <span class="rating">
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star-half-outline"></ion-icon>
+                      4.5
+                      <div class="veg-non-veg"><img src="https://i.ibb.co/yPBGp8N/veg.png" width="20" alt="veg"></div>
+                    </span>
+                    <h3>Dal makhani</h3>
+                    <p>it is made with urad dal (black beans) and other pulses, and includes butter and cream</p>
+                    <div class="price">
+                      <span class="pricetag">Rs. 330</span>
+                      <span class="pricestrike">Rs. 350</span>
+                      <span class="priceoff">(Rs. 20 OFF)</span>
+                    </div>
+                    <button class="ordernow"><span>order now</span></button>
+                  </div>
+                </a>
+              </li>
+              <li class="product-base">
+                <a href="#">
+                  <img src="https://i.ibb.co/C857bVX/desert-2.jpg" alt="">
+                  <div class="productinfo">
+                    <span class="rating">
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star-half-outline"></ion-icon>
+                      2.5
+                      <div class="veg-non-veg"><img src="https://i.ibb.co/yPBGp8N/veg.png" width="20" alt="veg"></div>
+                    </span>
+                    <h3>Cup Cake</h3>
+                    <p>A cupcake is a small, sweet baked good topped with frosting. You might bake cupcakes for your best friend's birthday.</p>
+                    <div class="price">
+                      <span class="pricetag">Rs. 80</span>
+                      <span class="pricestrike">Rs. 100</span>
+                      <span class="priceoff">(Rs. 20 OFF)</span>
+                    </div>
+                    <button class="ordernow"><span>order now</span></button>
+                  </div>
+                </a>
+              </li>
+              <li class="product-base">
+                <a href="#">
+                  <img src="https://i.ibb.co/VpnSDTw/north-2.jpg" alt="">
+                  <div class="productinfo">
+                    <span class="rating">
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      5
+                      <div class="veg-non-veg"><img src="https://i.ibb.co/qWmk157/non-veg.png" width="20" alt="veg"></div>
+                    </span>
+                    <h3>Butter Chicken</h3>
+                    <p>Butter Chicken is a type of curry made from chicken with a spiced tomato and butter (makhan) sauce.</p>
+                    <div class="price">
+                      <span class="pricetag">Rs. 400</span>
+                      <span class="pricestrike">Rs. 430</span>
+                      <span class="priceoff">(Rs. 30 OFF)</span>
+                    </div>
+                    <button class="ordernow"><span>order now</span></button>
+                  </div>
+                </a>
+              </li>
+              <li class="product-base">
+                <a href="#">
+                  <img src="https://i.ibb.co/MBdZcY4/chinese-2.jpg" alt="">
+                  <div class="productinfo">
+                    <span class="rating">
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      4
+                      <div class="veg-non-veg"><img src="https://i.ibb.co/qWmk157/non-veg.png" width="20" alt="veg"></div>
+                    </span>
+                    <h3>Chinese Noodles</h3>
+                    <p>Chinese type noodles are generally made from hard wheat flours, characterized by bright creamy white or bright yellow color and firm texture.</p>
+                    <div class="price">
+                      <span class="pricetag">Rs. 340</span>
+                      <span class="pricestrike">Rs. 350</span>
+                      <span class="priceoff">(Rs. 10 OFF)</span>
+                    </div>
+                    <button class="ordernow"><span>order now</span></button>
+                  </div>
+                </a>
+              </li>
+              <li class="product-base">
+                <a href="#">
+                  <img src="https://i.ibb.co/DDh2R8y/south.jpg" alt="">
+                  <div class="productinfo">
+                    <span class="rating">
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      5
+                      <div class="veg-non-veg"><img src="https://i.ibb.co/yPBGp8N/veg.png" width="20" alt="veg"></div>
+                    </span>
+                    <h3>South Indian Thali</h3>
+                    <p>Typical dishes include rice, dal, vegetables, roti, papad, dahi (yogurt), small amounts of chutney or pickle, and a sweet dish to top it off.</p>
+                    <div class="price">
+                      <span class="pricetag">Rs. 550</span>
+                      <span class="pricestrike">Rs. 580</span>
+                      <span class="priceoff">(Rs. 30 OFF)</span>
+                    </div>
+                    <button class="ordernow"><span>order now</span></button>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- ==========================
+            Right coloum for products end 
+            =============================-->
+        </div>
+      </div>
+      <!-- ==============
+        Footer start here 
+        =================== -->
+      <footer>
+        <div class="footerwrap">
+          <div class="footermenus">
+            <h5>ABOUT ZOMATO</h5>
+            <ul>
+              <li><a href="#">Who We Are</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Work With Us</a></li>
+              <li><a href="#">Investor Relations</a></li>
+              <li><a href="#">Report Fraud</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="footermenus">
+            <h5>ZOMAVERSE</h5>
+            <ul>
+              <li><a href="#">Zomato</a></li>
+              <li><a href="#">Feeding India</a></li>
+              <li><a href="#">Hyperpure</a></li>
+              <li><a href="#">Zomaland</a></li>
+            </ul>
+          </div>
+          <div class="footermenus">
+            <h5>FOR RESTAURANTS</h5>
+            <ul>
+              <li><a href="#">Who We Are</a></li>
+              <li><a href="#">Partner with us</a></li>
+              <li><a href="#">Apps for you</a></li>
+            </ul>
+          </div>
+          <div class="footermenus">
+            <h5>LEARN MORE</h5>
+            <ul>
+              <li><a href="#">Privacy</a></li>
+              <li><a href="#">Security</a></li>
+              <li><a href="#">Terms</a></li>
+              <li><a href="#">Sitemap</a></li>
+            </ul>
+          </div>
+          <div class="footermenus">
+            <h5>SOCIAL LINKS</h5>
+            <ul class="social_icons">
+              <li>
+                <a href="#">
+                  <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <ion-icon name="logo-twitter"></ion-icon>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <ion-icon name="logo-youtube"></ion-icon>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <ion-icon name="logo-linkedin"></ion-icon>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+      <!-- ==============
+        Footer end here 
+        =================== -->
+    </section>
+    <!-- Optional JavaScript -->
+    <script src="js/jQuery-v-3.6.js" type="text/javascript"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  </body>
+</html>
